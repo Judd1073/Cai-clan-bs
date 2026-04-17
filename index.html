@@ -4,20 +4,31 @@
   <title>CAI Clan</title>
   <style>
     body {
-      font-family: Arial;
-      background: #0f172a;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
       color: white;
       text-align: center;
     }
+
     header {
-      padding: 40px;
-      background: #1e293b;
+      padding: 60px 20px;
+      background: url("https://cdn.supercell.com/supercell.com/200130151926/supercell.com/files/styles/hero_image/public/hero_brawlstars.jpg") center/cover;
     }
-    h1 {
-      font-size: 50px;
+
+    header h1 {
+      font-size: 60px;
       color: #22c55e;
+      margin: 0;
     }
+
+    header p {
+      font-size: 20px;
+    }
+
     .btn {
+      display: inline-block;
+      margin-top: 20px;
       background: #22c55e;
       padding: 15px 30px;
       color: black;
@@ -25,8 +36,29 @@
       border-radius: 10px;
       font-weight: bold;
     }
+
     section {
-      padding: 40px;
+      padding: 50px 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 500px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      padding: 20px;
+      background: #020617;
+      font-size: 14px;
+      color: gray;
     }
   </style>
 </head>
@@ -36,23 +68,44 @@
 <header>
   <h1>CAI Clan</h1>
   <p>Play. Improve. Dominate.</p>
-  <a class="btn" href="#">Join Us</a>
+  <a class="btn" href="https://discord.gg/GWJhctxxu" target="_blank">Join Our Discord</a>
 </header>
 
 <section>
   <h2>About Us</h2>
-  <p>We are a competitive Brawl Stars clan focused on teamwork and pushing trophies.</p>
+  <div class="card">
+    <p>CAI is a competitive Brawl Stars clan focused on teamwork, skill, and pushing trophies together.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Our Gameplay</h2>
+  <div class="card">
+    <img src="https://cdn.supercell.com/supercell.com/200130151926/supercell.com/files/styles/hero_image/public/hero_brawlstars.jpg">
+    <p>We play daily, grind ranked, and improve as a team.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Top Members</h2>
+  <div class="card">
+    <p>🔥 Leader: (CAI|Jxddz)</p>
+    <p>⚡ Co-Leader: (CAI|Masonz)</p>
+    <p>💀 Top Player: (CAI|spin2win)</p>
+  </div>
 </section>
 
 <section>
   <h2>Play With Us</h2>
-  <p>Want to play with skilled players? Join our Discord and run games with us.</p>
+  <div class="card">
+    <p>Join our Discord to run games, improve, and play with skilled teammates.</p>
+    <a class="btn" href="https://discord.gg/GWJhctxxu" target="_blank">Play Now</a>
+  </div>
 </section>
 
-<section>
-  <h2>Join CAI</h2>
-  <p>Click the button above or contact us on Discord.</p>
-</section>
+<footer>
+  <p>© 2026 CAI Clan | Not affiliated with Supercell</p>
+</footer>
 
 </body>
 </html>
