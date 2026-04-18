@@ -2,14 +2,9 @@
 <html>
 <head>
   <title>CAI Clan</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
@@ -17,12 +12,10 @@
       color: white;
     }
 
-    /* NAVBAR */
     nav {
       position: fixed;
-      top: 0;
       width: 100%;
-      background: rgba(0,0,0,0.8);
+      background: #000;
       padding: 15px;
       text-align: center;
       z-index: 1000;
@@ -32,118 +25,95 @@
       color: white;
       margin: 0 15px;
       text-decoration: none;
-      font-size: 14px;
     }
 
-    nav a:hover {
-      color: #22c55e;
-    }
-
-    /* HEADER */
     header {
-      height: 100vh;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
+      justify-content: space-between;
+      padding: 120px 10%;
       background: linear-gradient(135deg, #020617, #0f172a);
     }
 
-    header h1 {
-      font-size: 90px;
-      color: #22c55e;
-      text-shadow: 0 0 20px #22c55e;
+    .hero-text {
+      max-width: 500px;
     }
 
-    header p {
-      font-size: 22px;
-      margin-bottom: 20px;
+    .hero-text h1 {
+      font-size: 70px;
+      color: #22c55e;
+    }
+
+    .hero-text p {
+      font-size: 18px;
     }
 
     .btn {
       background: #22c55e;
-      padding: 15px 35px;
+      padding: 15px 30px;
       color: black;
       text-decoration: none;
       border-radius: 10px;
-      font-weight: bold;
-      transition: 0.3s;
+      display: inline-block;
+      margin-top: 20px;
     }
 
-    .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #22c55e;
+    .logo {
+      width: 350px;
     }
 
     section {
-      padding: 100px 20px;
+      padding: 80px 10%;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
       text-align: center;
     }
 
-    h2 {
-      font-size: 45px;
-      margin-bottom: 40px;
+    .feature {
+      width: 30%;
     }
 
-    .card {
-      background: #0f172a;
-      margin: 20px auto;
-      padding: 30px;
+    .about {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 400px;
       border-radius: 15px;
-      max-width: 900px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
 
-    /* BRAWLERS GRID */
     .brawlers {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 25px;
-      max-width: 1000px;
-      margin: auto;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
     }
 
     .brawler {
       background: #0f172a;
-      padding: 20px;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .brawler:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 20px #22c55e;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
     }
 
     .brawler img {
       width: 100%;
-      border-radius: 10px;
     }
 
-    /* GALLERY */
-    .gallery {
+    .stats {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .gallery img {
-      width: 300px;
-      margin: 15px;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
+      justify-content: space-around;
+      text-align: center;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 20px;
       background: black;
-      color: gray;
     }
   </style>
 </head>
@@ -151,32 +121,47 @@
 <body>
 
 <nav>
+  <a href="#">Home</a>
   <a href="#about">About</a>
   <a href="#brawlers">Brawlers</a>
-  <a href="#gallery">Gallery</a>
   <a href="#join">Join</a>
 </nav>
 
 <header>
-  <h1>CAI Clan</h1>
-  <p>Play. Improve. Dominate.</p>
-  <a class="btn" href="https://discord.gg/GWJhctxxu" target="_blank">Join Discord</a>
+  <div class="hero-text">
+    <h1>CAI Clan</h1>
+    <p>Play. Improve. Dominate.</p>
+    <p>We are a competitive Brawl Stars clan focused on teamwork, skill, and becoming the best together.</p>
+    <a class="btn" href="https://discord.gg/GWJhctxxu" target="_blank">Join Discord</a>
+  </div>
+
+  <img src="logo.png" class="logo">
 </header>
 
-<section id="about">
-  <h2>About Us</h2>
+<section class="features">
+  <div class="feature">
+    <h2>🏆 Competitive</h2>
+    <p>We push trophies, win matches, and compete at high levels.</p>
+  </div>
+  <div class="feature">
+    <h2>👥 Teamwork</h2>
+    <p>We help each other grow and improve together.</p>
+  </div>
+  <div class="feature">
+    <h2>🎯 Improve</h2>
+    <p>We practice daily and get better every game.</p>
+  </div>
+</section>
 
-  <div class="card">
-    <p>CAI is a competitive Brawl Stars clan focused on improving every player. We grind daily and work together to dominate matches. Our goal is to become one of the strongest clans.</p>
+<section id="about" class="about">
+  <div>
+    <h2>About Us</h2>
+    <p>CAI is a clan full of dedicated players who love to compete and improve.</p>
+    <p>We are active daily and always ready for matches.</p>
+    <p>Our goal is to become one of the top clans.</p>
   </div>
 
-  <div class="card">
-    <p>We value teamwork, communication, and skill. Every member plays an important role in helping the clan succeed. We push ranks, learn strategies, and improve constantly.</p>
-  </div>
-
-  <div class="card">
-    <p>CAI is more than a clan, it is a community. We support each other, play together, and have fun while competing. Join us and take your gameplay to the next level.</p>
-  </div>
+  <img src="https://cdn.brawlify.com/brawlers/28000000.png">
 </section>
 
 <section id="brawlers">
@@ -191,3 +176,35 @@
     <div class="brawler"><img src="https://cdn.brawlify.com/brawlers/28000041.png"><p>Fang</p></div>
   </div>
 </section>
+
+<section class="stats">
+  <div>
+    <h2>45K+</h2>
+    <p>Total Trophies</p>
+  </div>
+  <div>
+    <h2>30/30</h2>
+    <p>Members</p>
+  </div>
+  <div>
+    <h2>Daily</h2>
+    <p>Active</p>
+  </div>
+  <div>
+    <h2>Top 1%</h2>
+    <p>Goal</p>
+  </div>
+</section>
+
+<section id="join">
+  <h2>Join CAI Today</h2>
+  <p>Join our Discord and start playing with skilled teammates.</p>
+  <a class="btn" href="https://discord.gg/GWJhctxxu" target="_blank">Join Now</a>
+</section>
+
+<footer>
+  <p>© 2026 CAI Clan</p>
+</footer>
+
+</body>
+</html>
