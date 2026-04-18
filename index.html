@@ -3,74 +3,146 @@
 <head>
   <title>CAI Clan</title>
 
-  <!-- Better Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #020617, #0f172a);
+      background: #020617;
       color: white;
-      text-align: center;
     }
 
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.8);
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #22c55e;
+    }
+
+    /* HEADER */
     header {
-      padding: 80px 20px;
-      background: url("https://images.unsplash.com/photo-1605902711622-cfb43c4437d1") center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #020617, #0f172a);
     }
 
     header h1 {
-      font-size: 65px;
+      font-size: 90px;
       color: #22c55e;
-      margin: 0;
+      text-shadow: 0 0 20px #22c55e;
     }
 
     header p {
-      font-size: 20px;
-      margin-top: 10px;
+      font-size: 22px;
+      margin-bottom: 20px;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 25px;
       background: #22c55e;
       padding: 15px 35px;
       color: black;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 10px;
       font-weight: bold;
       transition: 0.3s;
     }
 
     .btn:hover {
-      background: #16a34a;
-      transform: scale(1.05);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #22c55e;
     }
 
     section {
-      padding: 60px 20px;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 45px;
+      margin-bottom: 40px;
     }
 
     .card {
-      background: #1e293b;
+      background: #0f172a;
       margin: 20px auto;
-      padding: 25px;
+      padding: 30px;
       border-radius: 15px;
-      max-width: 600px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      max-width: 900px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
 
-    img {
+    /* BRAWLERS GRID */
+    .brawlers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .brawler {
+      background: #0f172a;
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .brawler:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px #22c55e;
+    }
+
+    .brawler img {
       width: 100%;
       border-radius: 10px;
-      margin-top: 15px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 300px;
+      margin: 15px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
     }
 
     footer {
-      padding: 20px;
-      background: #020617;
-      font-size: 14px;
+      text-align: center;
+      padding: 30px;
+      background: black;
       color: gray;
     }
   </style>
@@ -78,48 +150,44 @@
 
 <body>
 
+<nav>
+  <a href="#about">About</a>
+  <a href="#brawlers">Brawlers</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#join">Join</a>
+</nav>
+
 <header>
   <h1>CAI Clan</h1>
   <p>Play. Improve. Dominate.</p>
-  <a class="btn" href="https://discord.gg/GWJhctxxu" target="_blank">Join Our Discord</a>
+  <a class="btn" href="https://discord.gg/GWJhctxxu" target="_blank">Join Discord</a>
 </header>
 
-<section>
+<section id="about">
   <h2>About Us</h2>
 
   <div class="card">
-    <p>CAI is a competitive Brawl Stars clan focused on improving every player. We play daily and help each other get better. Our goal is to dominate matches and climb together.</p>
+    <p>CAI is a competitive Brawl Stars clan focused on improving every player. We grind daily and work together to dominate matches. Our goal is to become one of the strongest clans.</p>
   </div>
 
   <div class="card">
-    <p>We are a strong team that values skill, teamwork, and consistency. Every member is active and committed to winning. We support each other to reach higher ranks.</p>
+    <p>We value teamwork, communication, and skill. Every member plays an important role in helping the clan succeed. We push ranks, learn strategies, and improve constantly.</p>
   </div>
 
   <div class="card">
-    <p>CAI is more than just a clan, it’s a community. We play for fun but also take competition seriously. Join us if you want to improve and win more games.</p>
-  </div>
-
-</section>
-
-<section>
-  <h2>Gameplay</h2>
-  <div class="card">
-    <p>We grind ranked, play daily matches, and improve our skills together.</p>
-    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+    <p>CAI is more than a clan, it is a community. We support each other, play together, and have fun while competing. Join us and take your gameplay to the next level.</p>
   </div>
 </section>
 
-<section>
-  <h2>Join Us</h2>
-  <div class="card">
-    <p>Want to play with skilled players? Join our Discord and start playing now.</p>
-    <a class="btn" href="https://discord.gg/GWJhctxxu" target="_blank">Join Now</a>
+<section id="brawlers">
+  <h2>Featured Brawlers</h2>
+
+  <div class="brawlers">
+    <div class="brawler"><img src="https://cdn.brawlify.com/brawlers/28000000.png"><p>Shelly</p></div>
+    <div class="brawler"><img src="https://cdn.brawlify.com/brawlers/28000001.png"><p>Colt</p></div>
+    <div class="brawler"><img src="https://cdn.brawlify.com/brawlers/28000023.png"><p>Spike</p></div>
+    <div class="brawler"><img src="https://cdn.brawlify.com/brawlers/28000016.png"><p>Leon</p></div>
+    <div class="brawler"><img src="https://cdn.brawlify.com/brawlers/28000029.png"><p>Edgar</p></div>
+    <div class="brawler"><img src="https://cdn.brawlify.com/brawlers/28000041.png"><p>Fang</p></div>
   </div>
 </section>
-
-<footer>
-  <p>© 2026 CAI Clan</p>
-</footer>
-
-</body>
-</html>
